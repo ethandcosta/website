@@ -2,7 +2,7 @@
   "name": "website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ethandcosta.github.io/ethandcosta.github.io",
+  "homepage": "https://ethandcosta.github.io/website",
   "dependencies": {
     "cra-template": "1.2.0",
     "react": "^19.0.0",
