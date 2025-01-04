@@ -1,13 +1,194 @@
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-  background-color: #282c34;
-  color: white;
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-nav a {
-  margin: 0 1rem;
+/* Root Variables */
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #f5f5f5;
+  --text-color: #333;
+  --accent-color: #f76c6c;
+  --font-family: 'Roboto', sans-serif;
+}
+
+/* Body Styling */
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background: var(--secondary-color);
+  line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+  background: var(--primary-color);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+header nav a {
   color: white;
   text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: var(--accent-color);
+}
+
+/* Section Styling */
+section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  position: relative;
+}
+
+section h2::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background: var(--accent-color);
+  display: block;
+  margin: 0.5rem auto;
+}
+
+section p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Skills Grid */
+.skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.skills svg {
+  font-size: 4rem;
+  color: var(--primary-color);
+  transition: transform 0.3s, color 0.3s;
+}
+
+.skills svg:hover {
+  transform: scale(1.2);
+  color: var(--accent-color);
+}
+
+/* Project Cards */
+.projects {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.projects article {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projects article:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.projects h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.projects p {
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.projects a {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.projects a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Section */
+.contact {
+  background: var(--primary-color);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.contact a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact a:hover {
+  color: var(--accent-color);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #333;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav {
+    margin-top: 1rem;
+  }
+
+  header nav a {
+    margin: 0.5rem;
+  }
+
+  .skills,
+  .projects {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
