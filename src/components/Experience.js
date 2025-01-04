@@ -1,5 +1,7 @@
+import SpaceBackground from "./SpaceBackground";
 const Experience = () => (
     <section>
+      <SpaceBackground />
       <h2>Experience</h2>
       <ul>
         <li>Firmware Development Intern at [Company Name]</li>

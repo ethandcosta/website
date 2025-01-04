@@ -1,5 +1,8 @@
+import SpaceBackground from "./SpaceBackground";
+
 const About = () => (
     <section>
+    <SpaceBackground />
       <h2>About Me</h2>
       <p>
         I'm Ethan D'Costa, a computer science and physics student passionate about 

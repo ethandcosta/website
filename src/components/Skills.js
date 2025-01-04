@@ -1,7 +1,9 @@
 import { FaJava, FaPython, FaReact } from "react-icons/fa";
+import SpaceBackground from "./SpaceBackground";
 
 const Skills = () => (
   <section>
+    <SpaceBackground />
     <h2>Skills</h2>
     <div>
       <FaJava size={50} />
