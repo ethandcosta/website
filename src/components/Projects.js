@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../Projects.css'; 
 import SpaceBackground from './SpaceBackground';
 
@@ -40,38 +40,73 @@ const Projects = () => {
     };
   }, []);
 
+  const [activeStation, setActiveStation] = useState(null);
+  const handleMouseEnter = (index) => {
+    setActiveStation(index);
+  }
+  const handleMouseLeave = () => {
+    setActiveStation(null);
+  }
+
+  const projects = [
+    {
+      name: "SEDS - University Rover Challenge",
+      time: "Sept 2024 - Dec 2024",
+      description: "An annual university competition to build a robot suited towards" +
+      " a particular function, here being the navigation of Martian terrain.",
+    },
+    {
+      name: "Habit of Force",
+      time: "Jan 2024 - Dec 2024",
+      description: "A turn-based tactical RPG with a choice-driven story. As a space commander" +
+      ", manage your resources and alliances wisely as the plot demonstrates the consequences of " +
+      "pursuing a particular philosophy.",
+    },
+    {
+        name: "Short Video Generator",
+        time: "Dec 2024",
+        description: "Automatically generates short-form video content scraped from Reddit into a" + 
+        "familiar, mass-produced format.",
+    },
+    {
+        name: "Image Manipulator",
+        time: "Aug 2022",
+        description: "A rudimentary Photoshop-like image editing application that uses matrix operations"
+        + "to apply filters."
+    }
+  ];
+
   return (
     <section>
       <h2>Projects</h2>
       <SpaceBackground />
       <div className="timeline-container">
         <div className="timeline">
-          <div className="station" data-info="Created a portfolio website with React.">
-            <div className="circle"></div>
-            <div className="station-label">
-              <p className="station-name">Portfolio Website</p>
-              <p className="station-time">Jan 2023 - Feb 2023</p>
+          {projects.map((project, index) => (
+            <div
+              className={`station ${index % 2 === 0 ? "left" : "right"}`}
+              key={index}
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <div className="circle"></div>
+              <div className="station-label">
+                <p className="station-name">{project.name}</p>
+                <p className="station-time">{project.time}</p>
+                {activeStation === index && (
+                  <div className="station-description">
+                    <p>{project.description}</p>
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
-          <div className="station" data-info="Developed a rover dashboard UI with React.">
-            <div className="circle"></div>
-            <div className="station-label">
-              <p className="station-name">Rover Dashboard</p>
-              <p className="station-time">Mar 2023 - Apr 2023</p>
-            </div>
-          </div>
-          <div className="station" data-info="Built a turn-based RPG in Unity with C#.">
-            <div className="circle"></div>
-            <div className="station-label">
-              <p className="station-name">Unity RPG</p>
-              <p className="station-time">May 2023 - Jul 2023</p>
-            </div>
-          </div>
+          ))}
         </div>
-        <div className="tooltip" id="tooltip"></div>
+        <div className = "tooltip" id = "tooltip"></div>
       </div>
     </section>
   );
 };
+
 
 export default Projects;
