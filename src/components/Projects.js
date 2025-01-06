@@ -5,28 +5,22 @@ import SpaceBackground from './SpaceBackground';
 const Projects = () => {
   useEffect(() => {
     const stations = document.querySelectorAll('.station');
-    const tooltip = document.getElementById('tooltip');
 
     stations.forEach((station) => {
       const stationName = station.querySelector('.station-name');
 
       stationName.addEventListener('mouseover', (e) => {
-        const info = station.getAttribute('data-info');
-        tooltip.textContent = info;
-        tooltip.style.display = 'block';
-        tooltip.style.opacity = '1';
-        tooltip.style.left = `${e.pageX}px`;
-        tooltip.style.top = `${e.pageY - 20}px`;
+        const description = station.querySelector('.station-description');
+        if (description) {
+          description.style.display = 'block';
+        }
       });
 
       stationName.addEventListener('mouseout', () => {
-        tooltip.style.display = 'none';
-        tooltip.style.opacity = '0';
-      });
-
-      stationName.addEventListener('mousemove', (e) => {
-        tooltip.style.left = `${e.pageX}px`;
-        tooltip.style.top = `${e.pageY - 20}px`;
+        const description = station.querySelector('.station-description');
+    if (description) {
+      description.style.display = 'none';
+    }
       });
     });
 
@@ -35,7 +29,6 @@ const Projects = () => {
         const stationName = station.querySelector('.station-name');
         stationName.removeEventListener('mouseover', () => {});
         stationName.removeEventListener('mouseout', () => {});
-        stationName.removeEventListener('mousemove', () => {});
       });
     };
   }, []);
@@ -56,6 +49,12 @@ const Projects = () => {
       " a particular function, here being the navigation of Martian terrain.",
     },
     {
+        name: "Northeastern Robotics: Robot Dog",
+        time: "Sept 2024 - Dec 2024",
+        description: "worked on the software team for a custom-built robot dog a la Boston Dynamics,"
+        + " with emphasis on modernized repo through migration to ROS2."
+    },
+    {
       name: "Habit of Force",
       time: "Jan 2024 - Dec 2024",
       description: "A turn-based tactical RPG with a choice-driven story. As a space commander" +
@@ -64,9 +63,15 @@ const Projects = () => {
     },
     {
         name: "Short Video Generator",
-        time: "Dec 2024",
+        time: "Dec 2023",
         description: "Automatically generates short-form video content scraped from Reddit into a" + 
-        "familiar, mass-produced format.",
+        "familiar, mass-produced format using python and R.",
+    },
+    {
+        name: "Qwirkle",
+        time: "Sept 2023 - Dec 2023",
+        description: "Java multiplayer implementation of Qwirkle, a turn-based tile-matching game. Distributed"
+        + "over a TCP network with a player-agnostic REST-ful API that can be used to implement custom strategies."
     },
     {
         name: "Image Manipulator",
@@ -102,7 +107,7 @@ const Projects = () => {
             </div>
           ))}
         </div>
-        <div className = "tooltip" id = "tooltip"></div>
+      
       </div>
     </section>
   );
