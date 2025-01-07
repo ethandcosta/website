@@ -55,6 +55,12 @@ const Projects = () => {
         + " with emphasis on modernized repo through migration to ROS2."
     },
     {
+      name: "AI News Sentiment Stock Predictor",
+      time: "Jul 2024 - Aug 2024",
+      description: "an application that could take a given stock, determine its historical sentiment"
+      + " and correlate it with the stock-price, using gradient boosting and LSTM to predict future stock prices."
+    },
+    {
       name: "Habit of Force",
       time: "Jan 2024 - Dec 2024",
       description: "A turn-based tactical RPG with a choice-driven story. As a space commander" +
