@@ -24,10 +24,31 @@
     transform: translateY(-5px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
   }
+
+  .company-logo {
+    width: 200px; /* Adjust logo size */
+    height: 50px; /* Ensure square aspect ratio */
+    object-fit: cover; /* Maintain aspect ratio of logo */
+    border-radius: 8px; /* Optional rounded corners for logos */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Optional border */
+  }
+
+  .company-info {
+    display: flex;
+  align-items: center; /* Align logo and text vertically */
+  gap: 15px; /* Space between logo and details */
+  }
+
+  .company-details {
+    display: flex;
+  flex-direction: column; /* Stack company and dates */
+  }
   
   
   .experience-header {
-    margin-bottom: 15px; /* Space between header and description */
+    display: flex;
+  flex-direction: column; /* Preserve top-down structure */
+  gap: 10px; /* Add spacing between elements */
   }
   
   .position {
