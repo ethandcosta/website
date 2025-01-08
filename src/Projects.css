@@ -38,10 +38,12 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    left: 30px; /* Position label to the right of the timeline */
+    left: 40px;
+    right: 30px; 
     color: white;
   }
+
+  
   
   .station-name {
     font-weight: bold;
@@ -53,17 +55,39 @@
     opacity: 0.8;
   }
 
+  .station:nth-child(odd) .station-description {
+    left: calc(-100% - 20px);
+    text-align: right;
+  }
+
+  .station:nth-child(even) .station-description {
+    left: calc(100% + 20px);
+    text-align: left;
+  }
+
   .station:nth-child(odd) .station-label {
-    left: -150px;
+    left: -200px;
     align-items: flex-end;
   }
 
   .station:nth-child(even) .station-label {
-    right: 30px;
-    align-items: flex-start;
+    right: -200px;
+    align-items: flex-start; 
   }
 
+  .station:nth-child(odd) .station-label:hover {
+    transform: translateX(-10px);
+  }
+
+  .station:nth-child(even) .station-label:hover {
+    transform: translateX(10px);
+  }
+
+
   .station-description {
+    top: 100%;
+    left: 40%;
+    transform: translateX(-50%);
     margin-top: 10px;
     background-color: rgba(255, 255, 255, 0.1);
     color: white;
@@ -72,6 +96,14 @@
     width: 300px;
     box-shadow: 0 4px 6px rgba(0, 0, 0,0, 0.2 );
     transition: opacity 0.3s ease, transform, 0.3 ease;
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+  }
+
+  .station:nth-child(even) .station-description {
+    left: 30%; /* Move slightly to the left */
+    transform: translateX(-40%); /* Adjust the centering */
   }
 
   .station-description p {

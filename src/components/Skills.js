@@ -5,7 +5,7 @@ const Skills = () => (
   <section>
     <SpaceBackground />
     <h2>Skills</h2>
-    <div>
+    <div className="contact-info">
       <FaJava size={50} />
       <FaPython size={50} />
       <FaReact size={50} />

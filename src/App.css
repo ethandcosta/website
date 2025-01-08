@@ -259,14 +259,17 @@ body {
   background: rgba(255, 255, 255, 0.7);
   opacity: 0.8;
   pointer-events: none;
-  animation: fadeOut 40s ease-in forwards
+  animation: fadeInOut 40s ease-in forwards
 }
 
-@keyframes fadeOut {
+@keyframes fadeInOut {
   0% {
-    opacity: 1; /* Fully visible */
+    opacity: 0; /* Start as fully transparent */
+  }
+  15% {
+    opacity: 1; /* Fully visible at 50% of the animation duration */
   }
   100% {
-    opacity: 0; /* Fully transparent */
+    opacity: 0; /* Fade out to fully transparent */
   }
 }
