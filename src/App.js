@@ -14,7 +14,7 @@ const App = () => (
     <SpaceBackground />
     <Header />
     <Routes>
-      <Route path="/" element={<About />} />
+      <Route path="/website" element={<About />} />
       <Route path="/skills" element={<Skills />} />
       <Route path="/projects" element={<Projects />} />
       <Route path="/experience" element={<Experience />} />
