@@ -10,4 +10,7 @@
     margin: 0 auto;
     font-size: 1.1rem;
     font-style: bold;
+    text-align: left;
+    padding: 10px;
+    gap: 10px;
 }
