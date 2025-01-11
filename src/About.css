@@ -1,0 +1,13 @@
+.profile {
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 2000;
+    position: relative; /* Make sure z-index works */
+    max-width: 600px;
+    border-radius: 10px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    font-style: bold;
+}

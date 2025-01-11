@@ -74,6 +74,7 @@ section p {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  color: var(--secondary-color);
 }
 
 /* Skills Grid */
