@@ -1,133 +1,247 @@
+/* Default Desktop styles */
 .timeline-container {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 0;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.timeline {
+  position: relative;
+  width: 2px;
+  background-color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.station {
+  position: relative;
+  margin: 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+.station-label {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 40px;
+  right: 30px; 
+  color: white;
+}
+
+.station-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.station-time {
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+.station:nth-child(odd) .station-description {
+  left: calc(-100% - 20px);
+  text-align: right;
+}
+
+.station:nth-child(even) .station-description {
+  left: calc(100% + 20px);
+  text-align: left;
+}
+
+.station:nth-child(odd) .station-label {
+  left: -200px;
+  align-items: flex-end;
+}
+
+.station:nth-child(even) .station-label {
+  right: -200px;
+  align-items: flex-start; 
+}
+
+.station:nth-child(odd) .station-label:hover {
+  transform: translateX(-10px);
+}
+
+.station:nth-child(even) .station-label:hover {
+  transform: translateX(10px);
+}
+
+.station-description {
+  top: 100%;
+  left: 40%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 8px;
+  padding: 10px;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+}
+
+.station:nth-child(even) .station-description {
+  left: 30%; /* Move slightly to the left */
+  transform: translateX(-40%); /* Adjust the centering */
+}
+
+.station-description p {
+  margin: 0;
+}
+
+.station:hover .station-description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Tooltip styles */
+.tooltip {
+  position: absolute;
+  display: none;
+  background-color: black;
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  white-space: nowrap;
+  z-index: 10;
+  transform: translate(-50%, -10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Mobile and Tablet Styles (up to 768px) */
+@media (max-width: 768px) {
+  .timeline-container {
+    padding: 30px 0; /* Less padding on smaller screens */
   }
-  
+
   .timeline {
-    position: relative;
-    width: 2px;
-    background-color: white;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 1px; /* Make the timeline thinner on smaller screens */
   }
-  
+
   .station {
-    position: relative;
-    margin: 60px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 40px 0; /* Reduce margin between stations */
   }
-  
+
   .circle {
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    border-radius: 50%;
-    position: relative;
-    z-index: 1;
+    width: 15px; /* Smaller circles */
+    height: 15px;
   }
-  
+
   .station-label {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    left: 40px;
-    right: 30px; 
-    color: white;
+    left: 20px; /* Move labels closer */
+    right: 20px; /* Adjust positioning */
   }
 
-  
-  
   .station-name {
-    font-weight: bold;
-    margin-bottom: 5px;
+    font-size: 1.2rem; /* Slightly smaller text for names */
   }
-  
+
   .station-time {
-    font-size: 0.9em;
-    opacity: 0.8;
+    font-size: 0.8rem; /* Smaller font size for time */
   }
 
-  .station:nth-child(odd) .station-description {
-    left: calc(-100% - 20px);
-    text-align: right;
-  }
-
-  .station:nth-child(even) .station-description {
-    left: calc(100% + 20px);
-    text-align: left;
+  .station-description {
+    width: 100px; /* Smaller description box */
+    padding: 8px; /* Less padding */
   }
 
   .station:nth-child(odd) .station-label {
-    left: -200px;
-    align-items: flex-end;
+    left: -180px;
   }
-
+  
   .station:nth-child(even) .station-label {
-    right: -200px;
-    align-items: flex-start; 
+    right: -180px;
   }
 
   .station:nth-child(odd) .station-label:hover {
-    transform: translateX(-10px);
+    transform: translateX(-5px);
   }
-
+  
   .station:nth-child(even) .station-label:hover {
-    transform: translateX(10px);
+    transform: translateX(5px);
+  }
+}
+
+/* Mobile Styles (up to 480px) */
+@media (max-width: 480px) {
+  .timeline-container {
+    padding: 20px 0; /* Even less padding */
   }
 
+  .timeline {
+    width: 1px; /* Keep timeline thin */
+  }
+
+  .station {
+    margin: 30px 0; /* Reduce margin further */
+  }
+
+  .circle {
+    width: 12px; /* Even smaller circles */
+    height: 12px;
+  }
+
+  .station-label {
+    left: 15px; /* Move labels closer */
+    right: 15px; /* Adjust positioning */
+  }
+
+  .station-name {
+    font-size: 1rem; /* Smaller font size for names */
+  }
+
+  .station-time {
+    font-size: 0.7rem; /* Smaller font size for time */
+  }
 
   .station-description {
-    top: 100%;
-    left: 40%;
-    transform: translateX(-50%);
-    margin-top: 10px;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
-    border-radius: 8px;
-    padding: 10px;
-    width: 300px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0,0, 0.2 );
-    transition: opacity 0.3s ease, transform, 0.3 ease;
-    position: absolute;
-    z-index: 2;
-    text-align: center;
+    width: 100px; /* Even smaller description box */
+    padding: 3px; /* Less padding */
+    font-size: 0.3rem;
   }
 
-  .station:nth-child(even) .station-description {
-    left: 30%; /* Move slightly to the left */
-    transform: translateX(-40%); /* Adjust the centering */
-  }
-
-  .station-description p {
-    margin: 0;
-  }
-
-  .station:hover .station-description {
-    opacity: 1;
-    transform: translateY(0);
+  .station:nth-child(odd) .station-label {
+    left: -150px;
   }
   
-  /* Tooltip styles */
+  .station:nth-child(even) .station-label {
+    right: -150px;
+  }
+
+  .station:nth-child(odd) .station-label:hover {
+    transform: translateX(-2px);
+  }
+  
+  .station:nth-child(even) .station-label:hover {
+    transform: translateX(2px);
+  }
+}
+
+/* Tooltip Styles for Mobile */
+@media (max-width: 480px) {
   .tooltip {
-    position: absolute;
-    display: none;
-    background-color: black;
-    color: white;
-    padding: 8px;
-    border-radius: 4px;
-    font-size: 0.8em;
-    white-space: nowrap;
-    z-index: 10;
-    transform: translate(-50%, -10px);
-    pointer-events: none;
-    transition: opacity 0.3s ease;
+    font-size: 0.7em; /* Smaller tooltip font */
+    padding: 6px; /* Less padding */
   }
-  
+}

@@ -88,10 +88,10 @@ const Projects = () => {
   ];
 
   return (
-    <section>
-      <h2>Projects</h2>
+    <section className = "py-5">
+      <h2 className="text-center mb-5">Projects</h2>
       <SpaceBackground />
-      <div className="timeline-container">
+      <div className="timeline-container position-relative">
         <div className="timeline">
           {projects.map((project, index) => (
             <div
@@ -100,12 +100,12 @@ const Projects = () => {
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}
             >
-              <div className="circle"></div>
+              <div className="circle d-flex justify-content-center align-items-center"></div>
               <div className="station-label">
-                <p className="station-name">{project.name}</p>
-                <p className="station-time">{project.time}</p>
+                <p className="station-name fs-5 fw-bold">{project.name}</p>
+                <p className="station-time text-muted">{project.time}</p>
                 {activeStation === index && (
-                  <div className="station-description">
+                  <div className="station-description mt-2">
                     <p>{project.description}</p>
                   </div>
                 )}

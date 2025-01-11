@@ -1,38 +1,83 @@
+/* Default Desktop styles */
+.contact-info {
+  padding-top: 20px;
+  background: var(--primary-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 10px;
+  /* Add a little gap between items */
+  gap: 15px;
+}
+
+.contact-item {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  color: white;
+  transition: color 0.3s;
+}
+
+.contact-item a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.contact-item a:hover {
+  color: var(--accent-color);
+}
+
+.contact-icon:hover {
+  color: var(--accent-color);
+}
+
+/* Mobile and Tablet Styles */
+@media (max-width: 768px) {
   .contact-info {
-    padding-top: 20px;
-    background: var(--primary-color);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-radius: 10px;
+    flex-direction: column; /* Stack the contact items vertically */
+    align-items: flex-start; /* Align items to the start */
+    gap: 10px; /* Reduce gap between items */
+    padding-top: 15px; /* Slightly reduce padding */
   }
-  
+
   .contact-item {
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    font-size: 1rem; /* Slightly smaller font size */
+    gap: 8px; /* Slightly reduce gap between icon and text */
   }
-  
+
   .contact-icon {
-    font-size: 1.5rem;
-    color: white;
-    transition: color 0.3s;
+    font-size: 1.4rem; /* Smaller icon size */
   }
-  
+
   .contact-item a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 1.2rem;
-    transition: color 0.3s;
+    font-size: 1rem; /* Smaller font size for links */
   }
-  
-  .contact-item a:hover {
-    color: var(--accent-color);
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .contact-info {
+    padding-top: 10px; /* Further reduce padding for very small screens */
   }
-  
-  .contact-icon:hover {
-    color: var(--accent-color);
+
+  .contact-item {
+    font-size: 0.9rem; /* Further reduce font size */
+    gap: 5px; /* Tighten space between icon and text */
   }
-  
+
+  .contact-icon {
+    font-size: 1.3rem; /* Further reduce icon size */
+  }
+
+  .contact-item a {
+    font-size: 0.9rem; /* Reduce font size for links */
+  }
+}

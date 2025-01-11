@@ -1,82 +1,141 @@
+/* Default desktop styling */
 .experience-section {
-    display: flex;
-    flex-direction: column; /* Stack cards vertically */
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
-    height: 100vh; /* Full viewport height */
-    padding: 20px; /* Optional padding */
-    background-color: transparent
-  }
-  
-  .experience-card {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 12px;
+  display: flex;
+  flex-direction: column; /* Stack cards vertically on mobile */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  height: 70vh; /* Full viewport height */
+  background-color: transparent;
+}
+
+.experience-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0; /* Space between cards */
+  width: 100%;
+  max-width: 600px; /* Optional max width for readability */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Company Logo Styling */
+.company-logo {
+  width: 200px; /* Adjust logo size */
+  height: 50px; /* Ensure square aspect ratio */
+  object-fit: cover; /* Maintain aspect ratio of logo */
+  border-radius: 8px; /* Optional rounded corners for logos */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Optional border */
+}
+
+/* Company Info (Logo + Details) */
+.company-info {
+  display: flex;
+  align-items: center; /* Align logo and text vertically */
+  gap: 15px; /* Space between logo and details */
+}
+
+.company-details {
+  display: flex;
+  flex-direction: column; /* Stack company and dates vertically */
+}
+
+/* Header for Experience (Position, Company, Dates) */
+.experience-header {
+  display: flex;
+  flex-direction: column; /* Preserve top-down structure */
+  gap: 10px; /* Add spacing between elements */
+}
+
+.position {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+.company {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+.dates {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 5px 0 0;
+}
+
+.experience-description p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  line-height: 1.5;
+  text-align: justify;
+  padding-top: 10px;
+}
+
+/* Mobile-Friendly Adjustments Using Media Queries */
+@media (max-width: 768px) {
+  /* Stack the experience cards vertically on smaller screens */
+  .experience-section {
+    height: auto; /* Allow section to grow naturally on mobile */
     padding: 20px;
-    margin: 20px 0; /* Space between cards */
-    width: 100%;
-    max-width: 600px; /* Optional max width for readability */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  
-  .experience-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+
+  .experience-card {
+    max-width: 100%; /* Allow card to take full width on mobile */
+    margin: 10px 0; /* Add space between cards on mobile */
   }
 
   .company-logo {
-    width: 200px; /* Adjust logo size */
-    height: 50px; /* Ensure square aspect ratio */
-    object-fit: cover; /* Maintain aspect ratio of logo */
-    border-radius: 8px; /* Optional rounded corners for logos */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Optional border */
+    width: 150px; /* Smaller logo size on mobile */
+    height: auto; /* Maintain aspect ratio */
   }
 
-  .company-info {
-    display: flex;
-  align-items: center; /* Align logo and text vertically */
-  gap: 15px; /* Space between logo and details */
-  }
-
-  .company-details {
-    display: flex;
-  flex-direction: column; /* Stack company and dates */
-  }
-  
-  
   .experience-header {
-    display: flex;
-  flex-direction: column; /* Preserve top-down structure */
-  gap: 10px; /* Add spacing between elements */
-  }
-  
-  .position {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: white;
-    margin: 0;
-  }
-  
-  .company {
-    font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.8);
-    margin: 0;
-  }
-  
-  .dates {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.6);
-    margin: 5px 0 0;
-  }
-  
-  .experience-description p {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.9);
-    margin: 0;
-    line-height: 1.5;
-    text-align: justify;
-    padding-top: 10px;
+    gap: 8px; /* Slightly smaller gap on mobile */
   }
 
-  
+  .position {
+    font-size: 1.2rem; /* Slightly smaller text on mobile */
+  }
+
+  .company {
+    font-size: 1rem; /* Smaller company name font size */
+  }
+
+  .dates {
+    font-size: 0.9rem; /* Smaller date text */
+  }
+
+  .experience-description p {
+    font-size: 0.9rem; /* Smaller text for description */
+    line-height: 1.4; /* Slightly smaller line height */
+  }
+}
+
+/* For even smaller mobile devices */
+@media (max-width: 480px) {
+  .experience-card {
+    padding: 15px; /* Reduce padding on very small screens */
+  }
+
+  .position {
+    font-size: 1.1rem; /* Further reduce font size on tiny screens */
+  }
+
+  .company {
+    font-size: 0.9rem; /* Further reduce font size */
+  }
+
+  .dates {
+    font-size: 0.8rem; /* Make date text smaller */
+  }
+}

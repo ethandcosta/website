@@ -15,8 +15,6 @@ const About = () => (
           src={me}
           alt="profile pic"
           className="img-fluid rounded-circle shadow"
-          width="500"
-          height="300"
         />
       </div>
       <div className="col-12 col-md-8">

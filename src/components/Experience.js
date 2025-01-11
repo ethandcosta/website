@@ -24,9 +24,9 @@ const ExperienceCard = ({ position, company, img, dates, description }) => {
 };
 
 const Experience = () => (
-    <section>
+    <section className="py-5">
       <SpaceBackground />
-      <h2>Experience</h2>
+      <h2 className="text-center mb-5">Experience</h2>
       <div class="experience-section">
       <ExperienceCard 
         position="Software Engineer"
