@@ -13,7 +13,7 @@ const App = () => (
     <SpaceBackground />
     <Header />
     <Routes>
-      <Route path="/website" element={<About />} />
+      <Route path="/" element={<About />} />
       <Route path="/projects" element={<Projects />} />
       <Route path="/experience" element={<Experience />} />
       <Route path="/contact" element={<Contact />} />
