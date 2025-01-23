@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.1542b92a.css",
-    "main.js": "/static/js/main.7fd201bd.js",
+    "main.css": "/static/css/main.607ec06f.css",
+    "main.js": "/static/js/main.cd7c0beb.js",
     "static/js/488.9d97ac5d.chunk.js": "/static/js/488.9d97ac5d.chunk.js",
     "static/media/me.JPG": "/static/media/me.a57594098e3e43ae7900.JPG",
+    "static/media/northeastern.png": "/static/media/northeastern.98d2f493f90ba4ccdf42.png",
     "index.html": "/index.html",
-    "main.1542b92a.css.map": "/static/css/main.1542b92a.css.map",
-    "main.7fd201bd.js.map": "/static/js/main.7fd201bd.js.map",
+    "main.607ec06f.css.map": "/static/css/main.607ec06f.css.map",
+    "main.cd7c0beb.js.map": "/static/js/main.cd7c0beb.js.map",
     "488.9d97ac5d.chunk.js.map": "/static/js/488.9d97ac5d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1542b92a.css",
-    "static/js/main.7fd201bd.js"
+    "static/css/main.607ec06f.css",
+    "static/js/main.cd7c0beb.js"
   ]
 }
