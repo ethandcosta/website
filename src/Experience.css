@@ -4,7 +4,7 @@
   flex-direction: column; /* Stack cards vertically on mobile */
   justify-content: center; /* Center vertically */
   align-items: center; /* Center horizontally */
-  height: 70vh; /* Full viewport height */
+  min-height: 70vh; /* Full viewport height */
   background-color: transparent;
 }
 
@@ -27,9 +27,9 @@
 
 /* Company Logo Styling */
 .company-logo {
-  width: 200px; /* Adjust logo size */
-  height: 50px; /* Ensure square aspect ratio */
-  object-fit: cover; /* Maintain aspect ratio of logo */
+  max-width: 200px; /* Adjust logo size */
+  max-height: 50px; /* Ensure square aspect ratio */
+  object-fit: contain; /* Maintain aspect ratio of logo */
   border-radius: 8px; /* Optional rounded corners for logos */
   border: 1px solid rgba(255, 255, 255, 0.2); /* Optional border */
 }
