@@ -48,7 +48,7 @@ const Experience = () => (
       company = "Northeastern University"
       img= {northeasternLogo}
       dates = "Aug 2022 - Dec 2024"
-      description = "I was a teaching assistant for two classes: Object-Oriented Design and Professional Development for Co-Op. With OOD, I ran a lab section of 20 students where I reviewed design patterns and philosophies like SOLID principles. In the co-op class, I taught students how to sharpen their resumes, deliver strong interviews, and effectively use their network to get jobs."
+      description = "I was a teaching assistant for two classes: Object-Oriented Design and Professional Development for Co-Op. With OOD, I ran a lab section of 20 students where I reviewed design patterns and philosophies like SOLID principles in Java. In the co-op class, I taught students how to sharpen their resumes, deliver strong interviews, and effectively use their network to get jobs."
       />
       </div>
     </section>

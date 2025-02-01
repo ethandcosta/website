@@ -71,19 +71,36 @@ const Projects = () => {
         name: "Short Video Generator",
         time: "Dec 2023",
         description: "Automatically generates short-form video content scraped from Reddit into a" + 
-        "familiar, mass-produced format using python and R.",
+        " familiar, mass-produced format using python and R.",
     },
     {
         name: "Qwirkle",
         time: "Sept 2023 - Dec 2023",
         description: "Java multiplayer implementation of Qwirkle, a turn-based tile-matching game. Distributed"
-        + "over a TCP network with a player-agnostic REST-ful API that can be used to implement custom strategies."
+        + " over a TCP network with a player-agnostic REST-ful API that can be used to implement custom strategies."
+    },
+    {name: "Treeman Begins",
+      time: "Feb 2023",
+      description: "Made in 24hrs for Microgame Jam 2023, a short platformer programmed in GDScript using the Godot game engine." +
+      " Join Treeman, a half-tree, half-man monstrosity determined to find his family roots."
+    },
+    {
+      name: "A Call From Under the House",
+      time: "Oct 2022",
+      description: "Made in 24hrs for Spook Jam 2022, a Unity-based puzzle/exploration horror game soon to be published on Steam."
+      + " Investigate paranormal activities that plague a Massachusetts house to uncover secrets about a local town's sordid past."
     },
     {
         name: "Image Manipulator",
         time: "Aug 2022",
         description: "A rudimentary Photoshop-like image editing application that uses matrix operations"
-        + "to apply filters."
+        + " to apply filters."
+    },
+    {
+      name: "Northeastern Robotics: Robot Arm",
+      time: "Sept 2021 - May 2022",
+      description: "worked on a small team developing innovative, affordable prostethic arms for amputees. Developed code that"+
+      " syncronized the movement of servos using Arduino and Python to recreate palmar movement."
     }
   ];
 
