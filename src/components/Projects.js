@@ -42,6 +42,11 @@ const Projects = () => {
   }
 
   const projects = [
+    {name: "Card Game",
+    time: "Jan 2025 - Present",
+    description: "A digital recreation of a card game popular with my friends and I in college that's a " + 
+    "hybridization of Chinese poker and Mao; built in C# using Unity."
+    },
     {
       name: "SEDS - University Rover Challenge",
       time: "Sept 2024 - Dec 2024",
