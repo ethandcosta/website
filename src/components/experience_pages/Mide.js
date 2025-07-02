@@ -1,5 +1,5 @@
-const Mide = () => (
+const Mide = () => {
 
-);
+};
 
 export default Mide;
