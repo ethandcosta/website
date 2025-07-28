@@ -7,8 +7,7 @@ import {Link} from "react-router-dom";
 
 const ExperienceCard = ({ position, company, img, dates, description, link }) => {
   return (
-    <div className="experience-card">
-      <Link to={link} className="experience-link"/>
+    <Link to={link} className="experience-card">
       <div className="experience-header">
         <h3 className="position">{position}</h3>
         <div class="company-info">
@@ -22,7 +21,7 @@ const ExperienceCard = ({ position, company, img, dates, description, link }) =>
       <div className="experience-description">
         <p>{description}</p>
       </div>
-    </div>
+    </Link>
   );
 };
 

@@ -18,6 +18,13 @@
   max-width: 600px; /* Optional max width for readability */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.experience-card:visited{
+  color: inherit;
+  text-decoration: none;
 }
 
 .experience-card:hover {
@@ -138,4 +145,9 @@
   .dates {
     font-size: 0.8rem; /* Make date text smaller */
   }
+}
+
+
+.mide {
+  color: white;
 }
