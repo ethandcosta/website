@@ -1,4 +1,5 @@
 import endaq from "../../imgs/endaq.png";
+import ExperiencePage from "./ExperiencePage";
 const content = [
     {
         type: "project",
@@ -63,43 +64,7 @@ const content = [
 ]
 
 const Mide = () => {
-    return (
-        <div className="mide">
-      <h1 className="text-4xl font-bold mb-10">My Work at Mide Technology</h1>
-
-      {content.map((item, index) => {
-        if (item.type === "project") {
-          return (
-            <div key={index} className="mb-10">
-              <h2 className="text-2xl font-semibold mb-2">{item.title}</h2>
-              <p className="text-gray-800 whitespace-pre-line">{item.description.trim()}</p>
-            </div>
-          );
-        }
-
-        if (item.type === "image") {
-          return (
-            <div key={index} className="mb-10">
-              <div className="rounded-xl shadow-md overflow-hidden">
-                <img
-                  src={item.imageUrl}
-                  alt={item.caption}
-                  className="w-full object-cover"
-                />
-                {item.caption && (
-                  <div className="bg-white px-4 py-2 text-gray-700 text-sm border-t">
-                    {item.caption}
-                  </div>
-                )}
-              </div>
-            </div>
-          );
-        }
-
-        return null;
-      })}
-    </div>
-    );
+    return <ExperiencePage title="My Experience at MIDE" content={content}/>
 };
 
 export default Mide;
