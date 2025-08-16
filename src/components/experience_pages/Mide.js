@@ -3,7 +3,7 @@ import ExperiencePage from "./ExperiencePage";
 const content = [
     {
         type: "project",
-        title: "Periodic Ranodmized Testing Pipeline",
+        title: "Periodic Randomized Testing Pipeline",
         description: "Prior to my co-op at MIDE, every firwmare revision was tested by running manually created tests"+
         ", which was incredibly time-consuming and ineffective at ensuring good test coverage. The SDLC was significantly slowed"+
         " not only by having to manually create tests, but also by unhappy customers returning devices that failed because we had"+

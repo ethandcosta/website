@@ -10,6 +10,7 @@ import docker from "../../imgs/skills_icons/docker.png";
 import githubactions from "../../imgs/skills_icons/githubactions.png";
 import windows from "../../imgs/skills_icons/windows.png";
 import grafana from "../../imgs/skills_icons/grafana.png";
+import sql from "../../imgs/skills_icons/sql.png";
 
 const icons = {
   python: python,
@@ -21,7 +22,8 @@ const icons = {
   "GitHub Actions": githubactions,
   Windows: windows,
   Docker: docker,
-  Grafana: grafana
+  Grafana: grafana,
+  SQL: sql
 }
 
 const ExperiencePage = ({ title, content }) => {

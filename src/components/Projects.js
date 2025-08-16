@@ -1,6 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import '../Projects.css'; 
 import SpaceBackground from './SpaceBackground';
+import robotarm from "../imgs/projects/robotarm.jpg";
+import robotdog from "../imgs/projects/robotdog.png";
+import sedsrover from "../imgs/projects/sedsrover.png";
+import underhouse from "../imgs/projects/underhouse.jpg";
+import treeman from "../imgs/projects/treeman.png";
+import habit from "../imgs/projects/habit.png";
+import qwirkle from "../imgs/projects/qwirkle.jpg";
+import shorts from "../imgs/projects/shorts.jpeg";
+import seven from "../imgs/projects/seven.png";
 
 const Projects = () => {
   useEffect(() => {
@@ -34,7 +43,19 @@ const Projects = () => {
   }, []);
 
   const [activeStation, setActiveStation] = useState(null);
-  const handleMouseEnter = (index) => {
+  const [driftStyles, setDriftStyles] = useState({});
+  const handleMouseEnter = (index, side) => {
+    const randomX = (Math.random() * 100 + 80) * (side === "left" ? -1 : 1); // px
+    const randomY = -(Math.random() * 60 + 50); // always up
+    const hoverY = Math.random() * 6 + 4; // small bob in px
+    const rotate = Math.random() * 2 - 1; // -1 to 1 deg
+
+    setDriftStyles({
+      driftX: randomX,
+      driftY: randomY,
+      hoverY: hoverY,
+      rotate: rotate
+    });
     setActiveStation(index);
   }
   const handleMouseLeave = () => {
@@ -42,22 +63,25 @@ const Projects = () => {
   }
 
   const projects = [
-    {name: "Card Game",
+    {name: "SevenDown",
     time: "Jan 2025 - Present",
     description: "A digital recreation of a card game popular with my friends and I in college that's a " + 
-    "hybridization of Chinese poker and Mao; built in C# using Unity."
+    "hybridization of Chinese poker and Mao; built in C# using Unity.",
+    image: seven
     },
     {
       name: "SEDS - University Rover Challenge",
       time: "Sept 2024 - Dec 2024",
       description: "An annual university competition to build a robot suited towards" +
       " a particular function, here being the navigation of Martian terrain.",
+      image: sedsrover
     },
     {
         name: "Northeastern Robotics: Robot Dog",
         time: "Sept 2024 - Dec 2024",
         description: "worked on the software team for a custom-built robot dog a la Boston Dynamics,"
-        + " with emphasis on modernized repo through migration to ROS2."
+        + " with emphasis on modernized repo through migration to ROS2.",
+        image: robotdog
     },
     {
       name: "AI News Sentiment Stock Predictor",
@@ -71,29 +95,34 @@ const Projects = () => {
       description: "A turn-based tactical RPG with a choice-driven story. As a space commander" +
       ", manage your resources and alliances wisely as the plot demonstrates the consequences of " +
       "pursuing a particular philosophy.",
+      image: habit
     },
     {
         name: "Short Video Generator",
         time: "Dec 2023",
         description: "Automatically generates short-form video content scraped from Reddit into a" + 
         " familiar, mass-produced format using python and R.",
+        image: shorts
     },
     {
         name: "Qwirkle",
         time: "Sept 2023 - Dec 2023",
         description: "Java multiplayer implementation of Qwirkle, a turn-based tile-matching game. Distributed"
-        + " over a TCP network with a player-agnostic REST-ful API that can be used to implement custom strategies."
+        + " over a TCP network with a player-agnostic REST-ful API that can be used to implement custom strategies.",
+        image: qwirkle
     },
     {name: "Treeman Begins",
       time: "Feb 2023",
       description: "Made in 24hrs for Microgame Jam 2023, a short platformer programmed in GDScript using the Godot game engine." +
-      " Join Treeman, a half-tree, half-man monstrosity determined to find his family roots."
+      " Join Treeman, a half-tree, half-man monstrosity determined to find his family roots.",
+      image: treeman
     },
     {
       name: "A Call From Under the House",
       time: "Oct 2022",
       description: "Made in 24hrs for Spook Jam 2022, a Unity-based puzzle/exploration horror game soon to be published on Steam."
-      + " Investigate paranormal activities that plague a Massachusetts house to uncover secrets about a local town's sordid past."
+      + " Investigate paranormal activities that plague a Massachusetts house to uncover secrets about a local town's sordid past.",
+      image: underhouse
     },
     {
         name: "Image Manipulator",
@@ -105,7 +134,8 @@ const Projects = () => {
       name: "Northeastern Robotics: Robot Arm",
       time: "Sept 2021 - May 2022",
       description: "worked on a small team developing innovative, affordable prostethic arms for amputees. Developed code that"+
-      " syncronized the movement of servos using Arduino and Python to recreate palmar movement."
+      " syncronized the movement of servos using Arduino and Python to recreate palmar movement.",
+      image: robotarm
     }
   ];
 
@@ -115,27 +145,53 @@ const Projects = () => {
       <SpaceBackground />
       <div className="timeline-container position-relative">
         <div className="timeline">
-          {projects.map((project, index) => (
-            <div
-              className={`station ${index % 2 === 0 ? "left" : "right"}`}
-              key={index}
-              onMouseEnter={() => handleMouseEnter(index)}
-              onMouseLeave={handleMouseLeave}
-            >
-              <div className="circle d-flex justify-content-center align-items-center"></div>
-              <div className="station-label">
-                <p className="station-name fs-5 fw-bold">{project.name}</p>
-                <p className="station-time text-muted">{project.time}</p>
-                {activeStation === index && (
-                  <div className="station-description mt-2">
-                    <p>{project.description}</p>
-                  </div>
-                )}
-              </div>
+          {projects.map((project, index) => {
+             const side = index % 2 === 0 ? "left" : "right";
+             return(<div
+            className={`station ${index % 2 === 0 ? "left" : "right"}`}
+            key={index}
+            onMouseEnter={() => handleMouseEnter(index, side)}
+            onMouseLeave={handleMouseLeave}
+          >
+            <div className="circle d-flex justify-content-center align-items-center"></div>
+            
+            <div className="station-label">
+              <p className="station-name fs-5 fw-bold">{project.name}</p>
+              <p className="station-time text-muted">{project.time}</p>
+              {activeStation === index && (
+                <div className="station-description mt-2">
+                  <p>{project.description}</p>
+                </div>
+              )}
             </div>
-          ))}
+             {/* <img
+                src={project.image}
+                alt=""
+                className={`floating-image ${index % 2 === 0 ? "float-left" : "float-right"}`}
+                style={{
+                      "--drift-x": `${driftStyles.driftX}px`,
+                      "--drift-y": `${driftStyles.driftY}px`,
+                      "--hover-y": `${driftStyles.hoverY}px`,
+                      "--rotate-deg": `${driftStyles.rotate}deg`
+                    }}
+              /> */}
+            {activeStation === index && (
+              <img
+                src={project.image}
+                alt=""
+                className={`floating-image ${index % 2 === 0 ? "float-left" : "float-right"}`}
+                style={{
+                      "--drift-x": `${driftStyles.driftX}px`,
+                      "--drift-y": `${driftStyles.driftY}px`,
+                      "--hover-y": `${driftStyles.hoverY}px`,
+                      "--rotate-deg": `${driftStyles.rotate}deg`
+                    }}
+              />
+            )}
+          </div>);
+          })}
         </div>
-      
+        
       </div>
     </section>
   );
