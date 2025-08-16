@@ -1,35 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.9365eaa2.css",
-    "main.js": "/static/js/main.208aac21.js",
+    "main.css": "/static/css/main.607ec06f.css",
+    "main.js": "/static/js/main.16d4159b.js",
     "static/js/488.9d97ac5d.chunk.js": "/static/js/488.9d97ac5d.chunk.js",
-    "static/media/habit.png": "/static/media/habit.30101bf640d2bf1b8669.png",
     "static/media/me.JPG": "/static/media/me.a57594098e3e43ae7900.JPG",
-    "static/media/sedsrover.png": "/static/media/sedsrover.e81853184cf638cb4b45.png",
-    "static/media/seven.png": "/static/media/seven.17853c882b58022c54b7.png",
-    "static/media/endaq.png": "/static/media/endaq.9ba97910a218b44fdc21.png",
-    "static/media/azure.png": "/static/media/azure.9b642f842eaa56643ea4.png",
-    "static/media/linux.png": "/static/media/linux.29353b79cfc389275045.png",
-    "static/media/java.png": "/static/media/java.ad1bda565eaeb132115a.png",
-    "static/media/treeman.png": "/static/media/treeman.477d9ba1cdbccbdbd51c.png",
     "static/media/northeastern.png": "/static/media/northeastern.98d2f493f90ba4ccdf42.png",
-    "static/media/robotarm.jpg": "/static/media/robotarm.72b97a6246f5474a54a2.jpg",
-    "static/media/qwirkle.jpg": "/static/media/qwirkle.399d9fd8158936f48198.jpg",
-    "static/media/python.png": "/static/media/python.4455c0ed04be44ca8cd1.png",
-    "static/media/grafana.png": "/static/media/grafana.7f4c397acd13f7bfc490.png",
-    "static/media/aws.png": "/static/media/aws.1237dcb96fe43a664269.png",
-    "static/media/windows.png": "/static/media/windows.8fb16dd604744954fedb.png",
-    "static/media/underhouse.jpg": "/static/media/underhouse.764a96f423d1af5a1fd0.jpg",
-    "static/media/robotdog.png": "/static/media/robotdog.f7772c8eb85ab245bf23.png",
-    "static/media/shorts.jpeg": "/static/media/shorts.81f5ac6360b9c3a2054e.jpeg",
-    "static/media/sql.png": "/static/media/sql.e62ec75a1f1d86f88af1.png",
     "index.html": "/index.html",
-    "main.9365eaa2.css.map": "/static/css/main.9365eaa2.css.map",
-    "main.208aac21.js.map": "/static/js/main.208aac21.js.map",
+    "main.607ec06f.css.map": "/static/css/main.607ec06f.css.map",
+    "main.16d4159b.js.map": "/static/js/main.16d4159b.js.map",
     "488.9d97ac5d.chunk.js.map": "/static/js/488.9d97ac5d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9365eaa2.css",
-    "static/js/main.208aac21.js"
+    "static/css/main.607ec06f.css",
+    "static/js/main.16d4159b.js"
   ]
 }
