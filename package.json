@@ -1,0 +1,1 @@
+{\n  "name": "website",\n  "version": "1.0.0",\n  "description": "A simple website.",\n  "main": "index.js",\n  "homepage": "https://ethandcosta.github.io/website",\n  "scripts": {\n    "start": "node index.js"\n  },\n  "author": "Ethan Costa",\n  "license": "ISC"\n}
