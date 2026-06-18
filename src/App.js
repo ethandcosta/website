@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import Mide from "./components/experience_pages/Mide";
 import StateStreet from "./components/experience_pages/StateStreet";
 import Northeastern from "./components/experience_pages/Northeastern";
+import Canonical from "./components/experience_pages/Canonical";
 import './App.css';
 import SpaceBackground from "./components/SpaceBackground";
 
@@ -23,6 +24,7 @@ const App = () => (
       <Route path="/experience/mide" element={<Mide/>}/>
       <Route path="/experience/statestreet" element={<StateStreet/>}/>
       <Route path="/experience/northeastern" element={<Northeastern/>}/>
+      <Route path="/experience/canonical" element={<Canonical/>}/>
     </Routes>
   </Router>
 );

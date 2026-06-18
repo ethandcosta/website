@@ -11,6 +11,11 @@ import githubactions from "../../imgs/skills_icons/githubactions.png";
 import windows from "../../imgs/skills_icons/windows.png";
 import grafana from "../../imgs/skills_icons/grafana.png";
 import sql from "../../imgs/skills_icons/sql.png";
+import kubernetes from "../../imgs/skills_icons/kubernetes.png";
+import juju from "../../imgs/skills_icons/juju.png";
+import go from "../../imgs/skills_icons/go.png";
+import c from "../../imgs/skills_icons/c.png";
+import cve from "../../imgs/skills_icons/bug.png";
 
 const icons = {
   python: python,
@@ -23,7 +28,12 @@ const icons = {
   Windows: windows,
   Docker: docker,
   Grafana: grafana,
-  SQL: sql
+  SQL: sql,
+  kubernetes: kubernetes,
+  juju: juju,
+  Go: go,
+  C: c,
+  CVEs: cve
 }
 
 const ExperiencePage = ({ title, content }) => {

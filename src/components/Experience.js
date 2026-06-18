@@ -3,6 +3,7 @@ import "../Experience.css"
 import mideLogo from "../imgs/mide.png"
 import stateStreetLogo from "../imgs/state_street.png"
 import northeasternLogo from "../imgs/northeastern.png"
+import canonicalLogo from "../imgs/canonical.png"
 import {Link} from "react-router-dom";
 
 const ExperienceCard = ({ position, company, img, dates, description, link }) => {
@@ -30,6 +31,14 @@ const Experience = () => (
       <SpaceBackground />
       <h2 className="text-center mb-5">Experience</h2>
       <div class="experience-section">
+      <ExperienceCard 
+        position="Software Engineer"
+        company="Canonical"
+        img =  {canonicalLogo}
+        dates="Aug 2025 - Present"
+        description = "At Canonical, I am leading the integration of our Kubernetes distro into VMWare VKS, delivering secure, hardened builds of Kubernetes components to 1000s of enterprise clusters. I also actively develop Canonical's kubernetes snap and charmed operator, adding features to support FIPS and DISA-STIG compliance, in addition to QoL features."
+        link="/experience/canonical"
+      />
       <ExperienceCard 
         position="Software Engineer"
         company="MIDE Technology"
