@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => (
   <header>
-    <h1>Ethan D'Costa</h1>
+    <Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}><h1>Ethan D'Costa</h1></Link>
     <nav>
       <Link to="/">About</Link>
       <Link to="/projects">Projects</Link>
