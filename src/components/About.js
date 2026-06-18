@@ -19,11 +19,15 @@ const About = () => (
       </div>
       <div className="col-12 col-md-8">
         <p className="lead">
-          I'm Ethan D'Costa, a recent graduate from Northeastern University, where I
-          majored in computer science and physics and minored in math. I'm passionate about
-          leveraging my knowledge in software to make positive, tangible impacts on society through
-          programs that can provide unique insights about data and can serve
-          as a medium for creative expression.
+          I'm Ethan D'Costa, a Software Engineer at Canonical 
+          specializing in cloud infrastructure, container 
+          orchestration, and Linux systems plumbing. I 
+          graduated from Northeastern University with a 
+          B.S. in Computer Science and Physics. Currently,
+           my work focuses on hardening distributed systems, 
+           optimizing Kubernetes integration, and building 
+           low-level tooling that bridges the gap between 
+           software execution and kernel primitives.
         </p>
       </div>
     </div>
