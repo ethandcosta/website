@@ -1,4 +1,52 @@
-/* Default Desktop styles */
+.floating-image {
+  position: absolute;
+  width: 250px;
+  opacity: 0.85;
+  pointer-events: none;
+  animation-fill-mode: forwards;
+}
+
+/* LEFT SIDE */
+.float-left {
+  top: 50%;
+  right: 100%;
+  margin-right: 300px;
+  transform: translateY(-50%) translateX(0);
+  animation: driftOut 6s cubic-bezier(0.25, 1, 0.5, 1) forwards,
+             hover 4s ease-in-out infinite 6s;
+}
+
+/* RIGHT SIDE */
+.float-right {
+  top: 50%;
+  left: 100%;
+  margin-left: 300px;
+  transform: translateY(-50%) translateX(0);
+  animation: driftOut 6s cubic-bezier(0.25, 1, 0.5, 1) forwards,
+             hover 4s ease-in-out infinite 6s;
+}
+
+@keyframes driftOut {
+  0% { transform: translateY(-50%) translateX(0) scale(1); }
+  100% {
+    transform:
+      translateY(calc(-50% + var(--drift-y)))
+      translateX(var(--drift-x))
+      scale(1.05);
+  }
+}
+
+@keyframes hover {
+  0%, 100% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  50% {
+    transform:
+      translateY(calc(-50% - var(--hover-y)))
+      rotate(var(--rotate-deg));
+  }
+}
+
 .timeline-container {
   position: relative;
   width: 100%;

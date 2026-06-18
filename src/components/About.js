@@ -1,5 +1,5 @@
 import SpaceBackground from "./SpaceBackground";
-import me from "../imgs/me.JPG";
+import me from "../imgs/me.png"
 import "../About.css";
 
 /* retest */
